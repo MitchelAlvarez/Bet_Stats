@@ -13,8 +13,8 @@ export function SearchBar({ setResults }) {
             .then(json => {
                 const result = json.data.filter((player) => {
                     return value &&
-                        ((player && player.first_name.toLowerCase().includes(value)) ||
-                            (player && player.last_name.toLowerCase().includes(value)))
+                        ((player && player.first_name.toLowerCase().includes(value.toLowerCase())) ||
+                            (player && player.last_name.toLowerCase().includes(value.toLowerCase())))
                 })
                 setResults(result)
             })
