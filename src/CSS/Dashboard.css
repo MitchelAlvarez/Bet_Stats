@@ -1,0 +1,7 @@
+.dashboard-header {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
