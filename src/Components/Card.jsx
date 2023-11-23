@@ -37,7 +37,7 @@ export function Card({ anio, idPlayer }) {
                         games_played: json.data[0].games_played,
                         player_id: json.data[0].player_id,
                         season: json.data[0].season,
-                        min: json.datamin,
+                        min: json.data[0].min,
                         fgm: json.data[0].fgm,
                         fga: json.data[0].fga,
                         fg3m: json.data[0].fg3m,
@@ -72,10 +72,23 @@ export function Card({ anio, idPlayer }) {
             <div className='card-anio'>{anio}</div>
 
             <div className='stat'>
+                <p><strong>Games Played </strong>{season.games_played}</p>
+                <p><strong>Min Played </strong>{season.min}</p>
+                <p><strong>Free Throws Made </strong>{season.ftm}</p>
+                <p><strong>Free Throws Attempted </strong>{season.fta}</p>
+                <p><strong>Field Goals Made </strong>{season.fgm}</p>
+                <p><strong>Field Goals Attempted </strong>{season.fga}</p>
+                <p><strong>Field Goals 3 Made </strong>{season.fg3m}</p>
+                <p><strong>Field Goals 3 Attempted </strong>{season.fg3a}</p>
+                <p><strong>Points </strong>{season.pts}</p>
                 <p><strong>Asists </strong>{season.ast}</p>
+                <p><strong>Offensive Rebounds </strong>{season.oreb}</p>
+                <p><strong>Defensive Rebounds </strong>{season.dreb}</p>
                 <p><strong>Rebounds </strong>{season.reb}</p>
                 <p><strong>Stills </strong>{season.stl}</p>
-                <p><strong>Points </strong>{season.pts}</p>
+                <p><strong>Blocks </strong>{season.blk}</p>
+                <p><strong>Turnovers </strong>{season.turnover}</p>
+                <p><strong>Person Foul </strong>{season.pf}</p>
             </div>
 
         </div>

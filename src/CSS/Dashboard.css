@@ -5,3 +5,12 @@
     padding-bottom: 2rem;
     padding-top: 2rem;
 }
+
+.game {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    border: 1px solid royalblue;
+    padding: 1rem 1rem;
+}
