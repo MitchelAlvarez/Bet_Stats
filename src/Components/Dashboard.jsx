@@ -101,22 +101,22 @@ export function Dashboard({ fullName, idPlayer }) {
                         playerAverageVSTeam.map((game) => {
                             return (
                                 <div key={game.id} className='game'>
-                                    <p><strong>Free Throws Made </strong>{game.ftm}</p>
-                                    <p><strong>Free Throws Attempted </strong>{game.fta}</p>
-                                    <p><strong>Field Goals Made </strong>{game.fgm}</p>
-                                    <p><strong>Field Goals Attempted </strong>{game.fga}</p>
-                                    <p><strong>Field Goals 3 Made </strong>{game.fg3m}</p>
-                                    <p><strong>Field Goals 3 Attempted </strong>{game.fg3a}</p>
-                                    <p><strong>Points </strong>{game.pts}</p>
-                                    <p><strong>Asists </strong>{game.ast}</p>
-                                    <p><strong>Offensive Rebounds </strong>{game.oreb}</p>
-                                    <p><strong>Defensive Rebounds </strong>{game.dreb}</p>
-                                    <p><strong>Rebounds </strong>{game.reb}</p>
-                                    <p><strong>Stills </strong>{game.stl}</p>
-                                    <p><strong>Blocks </strong>{game.blk}</p>
+                                    <p><strong title='Free Throws Made'>FTM </strong>{game.ftm}</p>
+                                    <p><strong>FTA </strong>{game.fta}</p>
+                                    <p><strong>FGM </strong>{game.fgm}</p>
+                                    <p><strong>FGA </strong>{game.fga}</p>
+                                    <p><strong>FG3M </strong>{game.fg3m}</p>
+                                    <p><strong>FG3A </strong>{game.fg3a}</p>
+                                    <p><strong>PTS </strong>{game.pts}</p>
+                                    <p><strong>AST </strong>{game.ast}</p>
+                                    <p><strong>OREB </strong>{game.oreb}</p>
+                                    <p><strong>DREB </strong>{game.dreb}</p>
+                                    <p><strong>REB </strong>{game.reb}</p>
+                                    <p><strong>STL </strong>{game.stl}</p>
+                                    <p><strong>BLK </strong>{game.blk}</p>
                                     <p><strong>Turnovers </strong>{game.turnover}</p>
-                                    <p><strong>Person Foul </strong>{game.pf}</p>
-                                    <p><strong>Min Played </strong>{game.min}</p>
+                                    <p><strong>PF </strong>{game.pf}</p>
+                                    <p><strong>MIN </strong>{game.min}</p>
                                 </div>
                             )
                         })
