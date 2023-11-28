@@ -10,7 +10,7 @@ export function Dashboard({ fullName, idPlayer }) {
     const [options, setOptions] = useState([])
     const [anios, setAnios] = useState([])
     const [inicio, setInicio] = useState(true)
-    const [selectedOption, setSelectedOption] = useState([{ value: 0 }])
+    const [selectedOption, setSelectedOption] = useState(null)
     const [playerAverageVSTeam, setPlayerAverageVSTeam] = useState([])
 
     const getAniosArray = (anio, inicioCheck) => {
@@ -48,10 +48,11 @@ export function Dashboard({ fullName, idPlayer }) {
     }
 
     useEffect(() => {
-        const teamId = selectedOption.value
-        if (teamId) {
-            fetchplayerAverageVSTeam(idPlayer, teamId)
-        }
+        console.log(selectedOption)
+        if (selectedOption) {
+            fetchplayerAverageVSTeam(idPlayer, selectedOption.value)
+        } else setPlayerAverageVSTeam([])
+
 
     }, [selectedOption])
     console.log("PLAYER TEAM")
@@ -86,8 +87,8 @@ export function Dashboard({ fullName, idPlayer }) {
                     <h2>Current Season</h2>
                     <Select
                         options={teams}
-                        isClearable={true}
                         placeholder='Choose a Team'
+                        isClearable={true}
                         onChange={setSelectedOption}
                     />
                 </div>

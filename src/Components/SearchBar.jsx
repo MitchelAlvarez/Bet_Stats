@@ -12,9 +12,11 @@ export function SearchBar({ setResults }) {
             .then(response => response.json())
             .then(json => {
                 const result = json.data.filter((player) => {
+                    const fullname = player.first_name.toLowerCase() + ' ' + player.last_name.toLowerCase()
                     return value &&
-                        ((player && player.first_name.toLowerCase().includes(value.toLowerCase())) ||
-                            (player && player.last_name.toLowerCase().includes(value.toLowerCase())))
+                        /*((player && player.first_name.toLowerCase().includes(value.toLowerCase())) ||
+                            (player && player.last_name.toLowerCase().includes(value.toLowerCase())))*/
+                        (fullname.includes(value.toLowerCase()))
                 })
                 setResults(result)
             })
